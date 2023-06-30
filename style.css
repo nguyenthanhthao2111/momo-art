@@ -7,6 +7,7 @@
 :root {
     --main-color: #FF96AD;
     --second-color: #f3f3ff;
+    --first-color: #ff96ad;
 }
 
 body {
@@ -52,23 +53,218 @@ body {
     font-size: 15px;
     transition: 0.3s, ease-in-out;
 }
+  
+  .sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    top: 40%;
+    text-transform: uppercase;
+    color: #ffe6ff;
+    font-family: 'Unica One', cursive;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff96ad,
+      -0.2rem 0.1rem 1rem #ff96ad, 0.2rem 0.1rem 1rem #ff69ad,
+      0 -0.5rem 2rem #ffe6ff, 0 0.5rem 3rem #ffe6ff;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff96ad,
+        -0.2rem 0.1rem 1rem #ff96ad, 0.2rem 0.1rem 1rem #ff96ad,
+        0 -0.5rem 2rem #ffe6ff, 0 0.5rem 3rem #ffe6ff;
+    }
+    28%,
+    33% {
+      color: #ff96ad;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ffe6ff;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff96ad,
+        -0.2rem 0.1rem 1rem #ff96ad, 0.2rem 0.1rem 1rem #ff96ad,
+        0 -0.5rem 2rem #ffe6ff, 0 0.5rem 3rem #ffe6ff;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }  
 
 .banner {
-    height: 80vh;
+    height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./imgs/Banner.jpeg') no-repeat center center/cover;
     width: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .banner .banner-text {
-    padding: 200px 20px;
+    padding: 20rem 1.25rem;
 }
 
-.banner-text h1 {
+/* .banner-text h1 {
     font-family: 'Unica One', cursive;
     text-align: center;
     font-size: 70px;
     color: #FFF5FD;
-}
+} */
 
 .banner-text p {
     font-size: 22px;
@@ -473,4 +669,20 @@ footer span {
     }
 }
 
+/* Modal zoom picture*/
+.modal-content {
+    background-color: #000 !important;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.btn-close {
+    background-color: var(--main-color) !important;
+}
+
+.modal-img {
+    border-radius: 1rem !important;
+}
 
