@@ -417,6 +417,37 @@ footer span {
 }
 
 /*Comm part */
+.card-comm {
+  background-color: #000 !important; 
+  box-shadow: 0 10px 10px 0px rgba(204, 131, 180, 0.664);
+  color: #ffe6ff;
+}
+
+.card-text {
+  font-family: 'Pragati Narrow', sans-serif;;
+  font-size: 1.2rem;
+  letter-spacing: 1.1px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.options {
+  font-family: 'Pragati Narrow', sans-serif;;
+  font-size: 1.6rem;
+  letter-spacing: 1.1px;
+}
+
+.card-body button {
+  font-family: 'Pragati Narrow', sans-serif;
+  font-size: 1.2rem;
+}
+.card-title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: #ff96ad;
+}
 .comm {
     min-height: 80vh;
     max-width: 900px;
@@ -445,15 +476,15 @@ footer span {
     margin: 15px;
 }
 
-.more {
+#more {
     min-height: 60vh;
     max-width: 900px;
     margin: 100px 200px 50px 245px;
 }
 
 .more-cost {
-    font-family: 'Voltaire', sans-serif;
-    font-size: 30px;
+    font-family: 'Pragati Narrow', sans-serif;
+    font-size: 25px;
     line-height: 1.5cm;
 }
 
@@ -493,8 +524,8 @@ footer span {
 }
 
 .more-work {
-    font-family: 'Voltaire', sans-serif;
-    font-size: 30px;
+    font-family: 'Pragati Narrow', sans-serif;
+    font-size: 25px;
     line-height: 1.5cm;
 }
 
